@@ -89,26 +89,27 @@ infrastructure:
       annotations:
         kubernetes.io/ingress.class: nginx
 
-runtime-bundle:
-  enabled: true
-  db:
-    deployPostgres: true
-  image:
-    pullPolicy: IfNotPresent
+application:
+  runtime-bundle:
+    enabled: true
+    db:
+      deployPostgres: true
+    image:
+      pullPolicy: IfNotPresent
 
-activiti-cloud-query:
-  db:
-    deployPostgres: true
-  image:
-    pullPolicy: IfNotPresent
+  activiti-cloud-query:
+    db:
+      deployPostgres: true
+    image:
+      pullPolicy: IfNotPresent
 
-activiti-cloud-connector:
-  enabled: true
-  image:
-    pullPolicy: IfNotPresent
+  activiti-cloud-connector:
+    enabled: true
+    image:
+      pullPolicy: IfNotPresent
 
-activiti-cloud-audit:
-  db:
-    deployPostgres: true
-  image:
-    pullPolicy: IfNotPresent
+  activiti-cloud-audit:
+    db:
+      deployPostgres: true
+    image:
+      pullPolicy: IfNotPresent
